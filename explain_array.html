@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjelasan Array</title>
+</head>
+<body>
+    <script>
+        //Pop: Menghilangkan element terakhir dari sebuah Array
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.pop()
+        document.writeln(fruits)
+        //Push: Menambahkan Element baru ke dalam sebuah array di akhir
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits1.push("Kiwi")
+        document.writeln(fruits1)
+        //Filter:membuat array baru yang diisi dengan elemen yang lulus tes yang disediakan oleh suatu function.
+        const ages = [32, 33, 16, 40];
+        document.writeln(ages.filter(checkAdult));
+        function checkAdult(age) {
+        return age >= 18;
+        }
+        //forEach:memanggil fungsi untuk setiap elemen dalam array
+        let text = "";
+        const fruits2 = ["apple", "orange", "cherry"];
+        fruits2.forEach(myFunction);
+        document.writeln(text)
+
+        function myFunction(item, index) {
+            text += index + ": " + item + "<br>";
+        }
+        //Join:mengembalikan array sebagai string
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        let text3 = fruits3.join();
+        document.writeln(text3)
+        //Map:membuat array baru dari memanggil fungsi untuk setiap elemen array.
+        const numbers = [4, 9, 16, 25];
+        document.writeln(numbers.map(Math.sqrt));
+        //Sort:Mengurutkan Array menurut abjad
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits4.sort();
+        document.writeln(fruits4)
+        //For In:Mengulangi properti objek
+        const person = { fname: "John", lname: "Doe", age: 25 };
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+        document.writeln(txt)
+        //For of:Mengulangi nilai dari objek yg dapat diubah
+        const cars = ["BMW", "Volvo", "Mini"];
+        let text2 = "";
+        for (let x of cars) {
+            text2 += x + "<br>";
+        }
+        document.writeln(text2);
+    </script>
+</body>
+</html>
